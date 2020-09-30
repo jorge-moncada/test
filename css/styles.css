@@ -1,0 +1,22 @@
+body {
+    background-color: lightblue;
+    font-family: sans-serif;
+  }
+h1 {
+    color: #f3870b;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    background-color: lightgreen;
+
+}
+
+a:hover{
+    background-color: limegreen;
+    color: mediumblue;
+}
+
+li:hover{
+    font-weight: bold;
+}
