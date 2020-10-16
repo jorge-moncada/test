@@ -15,7 +15,7 @@ header{
     background-color: lightyellow;
     /* Altura del elemento, tiene que ser un elemento de bloque y 
     la especificaremos en pixeles o en vh */
-    height: 50px;
+    height: 35px;
     /* Position indica la posición del elemento con respecto
     a sus elementos adyacentes
     fixed, se mantiene en el mismo sitio aunque haya scroll
@@ -23,24 +23,26 @@ header{
     para los demás elementos
     relative, es el valor por defecto, quiere decir que se posicionan
     las cosas unas al lado de otras */
-    position: fixed;
+    position: absolute;
     /* cuando posicionamos de manera absolute o fixed
     podemos decirle a cuánta distancia estará de los bordes
     de la web top, bottom, left, right */
     
     /* El ancho del elemento, normalmente usaremos
     porcentajes */
-    width: 15%;
+    left: 0;
+    right: 0;
 }
 
 nav{
     background-color: rgb(200, 195, 195);
     padding-top: 7px;
     padding-right: 7px;
-    height: 50px;
+    height: 35px;
     position: fixed;
     right: 0;
-    width: 85%;
+    left: 0;
+    top: 0;
     text-align: end;
     /* Esto es para subir o bajar elementos cuando se solapen
     a modo de capas. Por defecto el valor es 0 así que 
@@ -53,9 +55,9 @@ aside{
     padding: 10px;
     background-color: lightsalmon;
     position: fixed;
-    left: 0;
+    right: 0;
     width: 15%;
-    top: 50px;
+    top: 70px;
     border-right-style: solid;
     border-width: 1px;
     /* Calc nos permite hacer cálculos con
@@ -63,27 +65,42 @@ aside{
     height: calc(100vh - 50px);
     overflow: auto;
 }
-
+footer{
+    position: absolute;
+    bottom: 0;
+    text-align: left;
+    font-size: 10px;
+    height: 30px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: lightseagreen;
+    z-index: 1;
+    padding-top: 2px;
+    overflow: auto;
+}
 main{
     background-color: lightskyblue;
     position: absolute;
-    right: 0;
+    left: 0;
     width: 85%;
-    top: 50px;
+    top: 70px;
     /* min-height nos permite especificar una altura 
     mínima para los elementos, por si acaso el contenido
     no es lo suficientemente grande; */
-    min-height: calc(100vh - 50px);
+    min-height: calc(100vh - 90px);
+    overflow: auto;
 }
 /* Todos los enlaces hijos directos de aside */
 aside > a{
     display: block;
     margin: 10px;
+    overflow: auto;
 }
 
 nav > a{
     display: inline-block;
-    width: 151px;
+    width: 130px;
 }
 
 nav>a,aside>a{
@@ -93,7 +110,7 @@ nav>a,aside>a{
     border-width: 2px;
     text-align: center;
     padding: 5px;
-    border-radius: 40px;
+    border-radius: 20px;
     text-decoration: none;
 }
 
