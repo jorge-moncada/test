@@ -1,0 +1,11 @@
+input{
+    display: block;
+}
+
+input[type="radio"]{
+    display: inline;
+}
+
+input[type="checkbox"]{
+    display: inline;
+}
