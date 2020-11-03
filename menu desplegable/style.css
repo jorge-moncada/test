@@ -1,0 +1,33 @@
+ul{
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+ul ul{
+    display: none;
+    position: relative;
+    padding-left: none;
+}
+
+ul > li{
+    background-color: cornflowerblue;
+    width: 100px;
+    padding: 5px;
+    margin: 0;
+    border-width: 1px;
+    border-style: solid;
+    border-color: coral;
+    border-radius: 10px;
+    font-family: 'Syne Tactile', cursive;
+}
+
+li:hover > ul{
+    display: block;
+}
+
+ul>li>ul>li{
+    border: none;
+    background-color: unset;
+}
+
