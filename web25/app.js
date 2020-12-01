@@ -18,7 +18,10 @@ function anyadirelemento(textotarea) {
     //cogo el elemento de la lista
     let listatareas = document.getElementById("listatareas")
     //le añado un elemento de lista con el texto del elemento textotarea
-    listatareas.innerHTML+="<li>"+textotarea+"</li>";
+    litarea = document.createElement("li")  //crear li
+    litarea.innerHTML = textotarea;         //poner el textotarea dentro del li
+    listatareas.appendChild(litarea);       //añadir el li a la lista tareas
+
 }
 
 
